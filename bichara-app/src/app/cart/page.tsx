@@ -1,22 +1,22 @@
-import { ArrowRight, Minus, Plus, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
-import { products } from "@/lib/data";
+import { ArrowRight, Minus, Plus, X } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
+import { products } from '@/lib/data'
 
 export default function CartPage() {
   // Simulate cart with first 2 products
   const cartItems = [
     { product: products[0], quantity: 1 },
     { product: products[1], quantity: 2 },
-  ];
+  ]
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.product.price * item.quantity,
     0,
-  );
-  const shipping: number = 0;
-  const total = subtotal + shipping;
+  )
+  const shipping: number = 0
+  const total = subtotal + shipping
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">
@@ -122,7 +122,7 @@ export default function CartPage() {
               <div className="flex justify-between text-neutral-600">
                 <span>Shipping</span>
                 <span>
-                  {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
+                  {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
                 </span>
               </div>
               <div className="pt-4 border-t border-neutral-200 flex justify-between font-bold text-lg text-neutral-900">
@@ -142,5 +142,5 @@ export default function CartPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

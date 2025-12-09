@@ -1,22 +1,22 @@
-import { ArrowLeft, ShoppingBag } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/Button";
-import { products } from "@/lib/data";
+import { ArrowLeft, ShoppingBag } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { Button } from '@/components/ui/Button'
+import { products } from '@/lib/data'
 
 interface ProductPageProps {
   params: Promise<{
-    id: string;
-  }>;
+    id: string
+  }>
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const { id } = await params;
-  const product = products.find((p) => p.id === id);
+  const { id } = await params
+  const product = products.find((p) => p.id === id)
 
   if (!product) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -96,5 +96,5 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

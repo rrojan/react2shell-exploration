@@ -1,5 +1,5 @@
-import { ProductCard } from "@/components/ProductCard";
-import { products } from "@/lib/data";
+import { ProductCard } from '@/components/ProductCard'
+import { products } from '@/lib/data'
 
 export default function ProductsPage() {
   return (
@@ -20,5 +20,5 @@ export default function ProductsPage() {
         ))}
       </div>
     </div>
-  );
+  )
 }

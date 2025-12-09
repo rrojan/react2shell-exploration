@@ -1,11 +1,11 @@
-import { ShoppingBag } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import type { Product } from "@/lib/data";
-import { Button } from "./ui/Button";
+import { ShoppingBag } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import type { Product } from '@/lib/data'
+import { Button } from './ui/Button'
 
 interface ProductCardProps {
-  product: Product;
+  product: Product
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
@@ -50,5 +50,5 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

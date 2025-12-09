@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { ProductCard } from "@/components/ProductCard";
-import { Button } from "@/components/ui/Button";
-import { products } from "@/lib/data";
+import Link from 'next/link'
+import { ProductCard } from '@/components/ProductCard'
+import { Button } from '@/components/ui/Button'
+import { products } from '@/lib/data'
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 4);
+  const featuredProducts = products.slice(0, 4)
 
   return (
     <div className="space-y-16 pb-16">
@@ -94,5 +94,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  )
 }
